@@ -29,6 +29,11 @@
     border: none;
     border-radius: 30px;
    }
+   #result{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+   }
    </style>
 
 </head>
@@ -40,12 +45,16 @@
          id="dice">
          <button class="btn" onclick="diceRoller()">Roll</button>
     </div>
+    <p id="result"></p>
 
     <script>
         const randomNum=Math.floor(Math.random() * 6) + 1;
             function diceRoller(){
+            const resultElement=document.getElementById("result");
             const imgElement=document.getElementById("dice");
-            imgElement.src=`${randomNum}.png`;      
+            imgElement.src=`${randomNum}.png`; 
+            resultElement.innerText=`Hurray! You rolled dice ,you got ${randomNum}`
+
 
         }
     </script>
