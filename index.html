@@ -48,10 +48,11 @@
     <p id="result"></p>
 
     <script>
-        const randomNum=Math.floor(Math.random() * 6) + 1;
+        
             function diceRoller(){
             const resultElement=document.getElementById("result");
             const imgElement=document.getElementById("dice");
+            const randomNum=Math.floor(Math.random() * 6) + 1;
             imgElement.src=`${randomNum}.png`; 
             resultElement.innerText=`Hurray! You rolled dice ,you got ${randomNum}`
 
